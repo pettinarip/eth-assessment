@@ -43,7 +43,9 @@ function Event({ event }: IProps) {
 
   return (
     <>
-      <Heading mb={6}>{event.name.de}</Heading>
+      <Heading mb={6}>
+        {event.name.de} <small>{dayjs(date).format("MMM D, YYYY")}</small>
+      </Heading>
       <Flex>
         {!isFirstDay && (
           <Link
